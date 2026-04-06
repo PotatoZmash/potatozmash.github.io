@@ -5,6 +5,8 @@
 <style>
 body {
     background: linear-gradient(135deg,#000,#3a2600,#ffd700);
+    background-size: 400% 400%;
+    animation: goldFlow 15s ease infinite;
     color: white;
     font-family: sans-serif;
     text-align: center;
@@ -13,6 +15,13 @@ body {
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    overflow: hidden;
+}
+
+@keyframes goldFlow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 a {
@@ -23,11 +32,70 @@ a {
     text-decoration:none;
     font-weight:bold;
     box-shadow:0 0 15px gold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+a:hover {
+    transform: scale(1.1);
+    box-shadow:0 0 25px gold;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gold;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px gold; }
+    50% { transform: scale(1.1); box-shadow: 0 0 40px #ffd700; }
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 12s linear infinite;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 0 0 10px gold;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    text-shadow: 0 0 5px gold;
 }
 </style>
 </head>
 
 <body>
+
+<div class="marquee"><span>⭐ BEST UNIVERSAL SCRIPTS FOR ROBLOX ⭐</span></div>
+
+<img src="https://yt3.googleusercontent.com/IwSUZDDApqR78JYoW-7iYTZg-GwSdwfPUdUf1aqGDSMGXyHIy6jfDVHk1OgERN8h1PCA4SuKhg=s160-c-k-c0x00ffffff-no-rj" 
+     class="logo" alt="Norqueloid Logo">
 
 <h1>🔥 Norqueloid Script Hub</h1>
 <p>Best Roblox Scripts</p>
